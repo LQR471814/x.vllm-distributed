@@ -13,4 +13,4 @@ dependencies = [
 [project.scripts]
 head = "ray start --head --port 6379"
 worker = "ray start --address 192.168.20.1:6379"
-vllm = "vllm serve Qwen/Qwen3-0.6B --distributed-executor-backend ray --tensor-parallel-size 1"
+vllm = "vllm serve Qwen/Qwen3-0.6B --distributed-executor-backend ray --tensor-parallel-size 1 --pipeline-parallel-size 2"
