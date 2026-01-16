@@ -1,3 +1,5 @@
+export CUDA_VISIBLE_DEVICES=0
+
 stop:
 	uv run ray stop
 
@@ -14,7 +16,7 @@ nodes:
 	uv run ray list nodes
 
 vllm:
-	uv run vllm serve Qwen/Qwen3-0.6B \
+	VLLM_HOST_IP=192.168.20.1 uv run vllm serve Qwen/Qwen3-0.6B \
 		--distributed-executor-backend ray \
 		--tensor-parallel-size 1 \
 		--pipeline-parallel-size 2
