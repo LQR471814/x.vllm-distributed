@@ -5,7 +5,7 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
-    "nvidia-cuda-runtime-cu12>=12.8.90",
+    "nvidia-cuda-runtime>=12.8.90",
     "ray[default]>=2.53.0",
     "vllm==0.13.0",
 ]
