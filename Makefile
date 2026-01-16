@@ -10,6 +10,9 @@ worker:
 stat:
 	uv run ray status
 
+nodes:
+	uv run ray list nodes
+
 vllm:
 	uv run vllm serve Qwen/Qwen3-0.6B \
 		--distributed-executor-backend ray \
