@@ -1,5 +1,3 @@
-export CUDA_VISIBLE_DEVICES=0
-
 stop:
 	uv run ray stop
 
