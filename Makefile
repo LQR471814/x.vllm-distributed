@@ -29,8 +29,9 @@ nodes:
 vllm:
 	uv run vllm serve Qwen/Qwen3-0.6B \
 		--distributed-executor-backend ray \
+		--gpu-memory-utilization 0.8 \
 		--tensor-parallel-size 1 \
-		--pipeline-parallel-size 2 \
+		--pipeline-parallel-size 1 \
 		--dtype=half \
 		--host 0.0.0.0 \
 		--port 8000
