@@ -1,3 +1,5 @@
+export VLLM_HOST_IP := $(shell ip -j addr show | jq -r '.[ ] | .addr_info[].local | select(startswith("192.168.20"))')
+
 stop:
 	uv run ray stop
 
