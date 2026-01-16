@@ -32,7 +32,7 @@ vllm:
 		--gpu-memory-utilization 0.8 \
 		--max-model-len 4096 \
 		--tensor-parallel-size 1 \
-		--pipeline-parallel-size 1 \
+		--pipeline-parallel-size 2 \
 		--dtype=half \
 		--host 0.0.0.0 \
 		--port 8000
