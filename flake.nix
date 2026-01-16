@@ -24,6 +24,9 @@
           packages =
             (with pkgs; [
               uv
+              iproute2
+              jq
+              gnumake
             ])
             ++ libs;
           # Nixpkgs now automates much of the LD_LIBRARY_PATH via 'autoAddDriverRunpath'
