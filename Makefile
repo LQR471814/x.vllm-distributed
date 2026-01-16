@@ -5,7 +5,7 @@ head:
 	uv run ray start \
 		--head \
 		--port 6379 \
-		--node-ip-address 0.0.0.0 \
+		--node-ip-address 192.168.20.1 \
 		--num-gpus 1 \
 		--dashboard-host 0.0.0.0 \
 		--block
