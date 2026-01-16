@@ -31,6 +31,8 @@ nodes:
 vllm:
 	uv run vllm serve Qwen/Qwen3-0.6B \
 		--distributed-executor-backend ray \
+		--structured-outputs-config.disable_any_whitespace True \
+		--structured-outputs-config.backend outlines \
 		--gpu-memory-utilization 0.8 \
 		--max-model-len 30000 \
 		--tensor-parallel-size 1 \
