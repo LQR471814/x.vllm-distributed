@@ -1,4 +1,5 @@
-export VLLM_HOST_IP := $(shell ip -j addr show | jq -r '.[ ] | .addr_info[].local | select(startswith("192.168.20"))')
+export VLLM_HOST_IP := $(shell ip -j addr show | jq -r '.[ ] | .addr_info[] | select(.local | startswith("192.168.20")) | .local')
+export GLOO_SOCKET_IFNAME := $(shell ip -j addr show | jq -r '.[ ] | .addr_info[] | select(.local | startswith("192.168.20")) | .label')
 
 stop:
 	uv run ray stop
