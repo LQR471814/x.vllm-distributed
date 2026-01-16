@@ -33,7 +33,7 @@ vllm:
 		--distributed-executor-backend ray \
 		--gpu-memory-utilization 0.8 \
 		--max-model-len 4096 \
-		--tensor-parallel-size 1 \
+		--tensor-parallel-size 2 \
 		--pipeline-parallel-size 2 \
 		--dtype=half \
 		--host 0.0.0.0 \
