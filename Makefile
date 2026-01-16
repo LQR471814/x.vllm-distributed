@@ -31,4 +31,6 @@ vllm:
 		--distributed-executor-backend ray \
 		--tensor-parallel-size 1 \
 		--pipeline-parallel-size 2 \
-		--dtype=half
+		--dtype=half \
+		--host 0.0.0.0 \
+		--port 8000
